@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MPesantezT3.Operaciones">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="LightBlue" Spacing="15">
+                <Image Source="logo.png"/>
+                <Label Text="SISTEMA DE CALIFICACIONES UISRAEL" FontSize="30" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkBlue"/>
+                <Label Text="NOTAS DEL PRIMER PARCIAL" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="white" FontSize="20"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nota de Seguimiento 1:" FontSize="17" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="txtSeguimiento1" Placeholder="Ingrese la nota" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" TextChanged="txtSeguimiento1_TextChanged"/>
+
+                    <Label Text="Examen 1:" FontSize="17" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                    <Entry x:Name="txtExamen1" Placeholder="Ingrese la nota" Grid.Row="1" Grid.Column="1" Keyboard="Numeric" TextChanged="txtExamen1_TextChanged"/>
+
+                    <Label Text="Nota Parcial 1:" FontSize="17" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                    <Entry x:Name="txtParcial1" IsEnabled="False" Placeholder="Nota Parcial 1" Grid.Row="2" Grid.Column="1"/>
+
+                </Grid>
+                <Button Text="CALCULAR" x:Name="btnCalcular1" Clicked="btnCalcular1_Clicked"/>
+
+                <Label Text="NOTAS DEL SEGUNDO PARCIAL" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="white" FontSize="20"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nota de Seguimiento 2:" FontSize="17" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center"/>
+                    <Entry x:Name="txtSeguimiento2" Placeholder="Ingrese la nota" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" TextChanged="txtSeguimiento2_TextChanged"/>
+
+                    <Label Text="Examen 2:" FontSize="17" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                    <Entry x:Name="txtExamen2" Placeholder="Ingrese la nota" Grid.Row="1" Grid.Column="1" Keyboard="Numeric" TextChanged="txtExamen2_TextChanged"/>
+
+                    <Label Text="Nota Parcial 2:" FontSize="17" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                    <Entry x:Name="txtParcial2" IsEnabled="False" Placeholder="Nota Parcial 2" Grid.Row="2" Grid.Column="1"/>
+
+                </Grid>
+                <Button Text="CALCULAR" x:Name="btnCalcular2" Clicked="btnCalcular2_Clicked" IsEnabled="False"/>
+                <Label x:Name="txtAprobado" FontSize="50"/>
+                <Button Text="NUEVO" x:Name="btnNuevo" IsEnabled="False" Clicked="btnNuevo_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
